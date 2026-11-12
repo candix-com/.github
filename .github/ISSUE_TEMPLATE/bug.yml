@@ -1,0 +1,28 @@
+name: Bug
+description: Something behaves differently from what it should.
+type: Bug
+body:
+  - type: textarea
+    attributes:
+      label: What happens
+      description: The behavior, with the exact error and permalinks to the code at a commit.
+  - type: textarea
+    attributes:
+      label: What should happen
+      description: The expected behavior, and who is hurt by the difference.
+  - type: textarea
+    attributes:
+      label: Reproduce
+      description: A failing test, or exact steps.
+  - type: textarea
+    attributes:
+      label: Found while
+      description: What you were doing.
+  - type: textarea
+    attributes:
+      label: Cause
+      description: What you think causes it, marked as a guess, and what you did not check.
+  - type: textarea
+    attributes:
+      label: Done when
+      description: The check that passes once it is fixed.

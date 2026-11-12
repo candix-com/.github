@@ -1,0 +1,24 @@
+name: Decision
+description: A question a human must settle.
+type: Decision
+body:
+  - type: textarea
+    attributes:
+      label: The question
+      description: One question, in a sentence.
+  - type: textarea
+    attributes:
+      label: Found while
+      description: What you were doing.
+  - type: textarea
+    attributes:
+      label: Where it lives
+      description: The code involved, as permalinks.
+  - type: textarea
+    attributes:
+      label: Options
+      description: Leave empty when filing. Triage adds each choice with its consequences, good and bad, and a recommendation.
+  - type: textarea
+    attributes:
+      label: Outcome
+      description: Leave empty when filing. The choice the owner made, and its reason.

@@ -1,0 +1,20 @@
+name: Feature
+description: Something users cannot do yet.
+type: Feature
+body:
+  - type: textarea
+    attributes:
+      label: The problem
+      description: What is missing or wrong, and for whom.
+  - type: textarea
+    attributes:
+      label: Found while
+      description: What you were doing.
+  - type: textarea
+    attributes:
+      label: Proposal
+      description: The change you would make, marked as a suggestion.
+  - type: textarea
+    attributes:
+      label: Done when
+      description: The check that passes once it is done.
