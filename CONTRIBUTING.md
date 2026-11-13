@@ -36,22 +36,20 @@ Once the issue is filed, don't edit the body: later comments answer it, and edit
 
 ## Fields
 
-Set Priority and Effort when filing. Status and Assignee change as the work moves.
+Set Priority and Effort when filing.
 
 - **Priority**, from the Impact:
-  - `Urgent`: security or data at risk, or a core flow broken with no workaround.
-  - `High`: a core flow broken with a workaround, or another flow broken with no workaround.
-  - `Medium`: another flow broken with a workaround, or a capability users need is missing.
-  - `Low`: nothing users can notice.
-
-  A core flow is what the product exists for: signing in, paying, and its main job.
+  - `Urgent`: a security hole, data lost or wrong (money included), or users can't use the product at all.
+  - `High`: a bug users can hit: something they do fails or gives a wrong result.
+  - `Medium`: a missing capability users need, or a bug only the team can hit (tests, tooling, dev setup).
+  - `Low`: nothing anyone notices: cleanup, refactors, internals.
 - **Effort**, from how much has to be worked out:
   - `Low`: the change is fully known, and doing it is mechanical.
   - `Medium`: the outcome is known, but getting there takes design.
   - `High`: it changes something other code relies on, or the fix isn't known yet.
 - **Status**:
   - `New`: leave it when filing. Triage moves it on.
-  - `Waiting on owner`: set it when the issue can't move until the repository's owner answers a question or does something only they can do. Ask the question in a comment that mentions them. Set it back once they have.
+  - `Waiting on owner`: set it when only the repository's owner can unblock the issue, and ask them in a comment that mentions them. Set it to `Ready` once they have.
   - `Ready`: set it when the issue is triaged and nothing about it is left to settle.
   - `In progress`: set it when you start the work.
 - **Assignee**: assign the issue to the person or agent who will do the work, once that is decided. Leave it unchanged while the issue waits on someone else: Status says that.
