@@ -15,4 +15,4 @@ body:
   - type: textarea
     attributes:
       label: Context
-      description: What you were doing when you found it, and any idea about the cause or the fix, marked as speculation.
+      description: What you were doing when you found it, and any guess at the cause or fix, marked as such.
