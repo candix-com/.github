@@ -1,28 +1,14 @@
 name: Bug
-description: Something behaves differently from what it should.
+description: The code doesn't do what it's meant to.
 type: Bug
 body:
   - type: textarea
     attributes:
-      label: What happens
-      description: The behavior, with the exact error and permalinks to the code at a commit.
-  - type: textarea
-    attributes:
-      label: What should happen
-      description: The expected behavior, and who is hurt by the difference.
-  - type: textarea
-    attributes:
-      label: Reproduce
-      description: A failing test, or exact steps.
+      label: The problem
+      description: What is wrong or missing, as facts. Mark any idea about the cause or the fix as speculation.
+    validations:
+      required: true
   - type: textarea
     attributes:
       label: Found while
-      description: What you were doing.
-  - type: textarea
-    attributes:
-      label: Cause
-      description: What you think causes it, marked as a guess, and what you did not check.
-  - type: textarea
-    attributes:
-      label: Done when
-      description: The check that passes once it is fixed.
+      description: What you were doing when you found it.

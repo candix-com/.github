@@ -1,20 +1,14 @@
 name: Feature
-description: Something users cannot do yet.
+description: The code should do something it doesn't do yet.
 type: Feature
 body:
   - type: textarea
     attributes:
       label: The problem
-      description: What is missing or wrong, and for whom.
+      description: What is wrong or missing, as facts. Mark any idea about the cause or the fix as speculation.
+    validations:
+      required: true
   - type: textarea
     attributes:
       label: Found while
-      description: What you were doing.
-  - type: textarea
-    attributes:
-      label: Proposal
-      description: The change you would make, marked as a suggestion.
-  - type: textarea
-    attributes:
-      label: Done when
-      description: The check that passes once it is done.
+      description: What you were doing when you found it.
