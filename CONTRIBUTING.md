@@ -10,9 +10,21 @@ How an issue is filed and kept in every Candix repository that has no guide of i
 
 ## The body
 
-- **The problem**: what is wrong or missing, as facts.
-- **Impact**: who or what it hurts, and how. If users can hit a bug, assume they are hitting it.
-- **Context**: what you were doing when you found it, and any idea about the cause or the fix, marked as speculation.
+The issue forms write the body in this shape. An issue filed any other way uses it too:
+
+```markdown
+### The problem
+
+What is wrong or missing, as facts.
+
+### Impact
+
+Who or what it hurts, and how. If users can hit a bug, assume they are hitting it.
+
+### Context
+
+What you were doing when you found it, and any idea about the cause or the fix, marked as speculation.
+```
 
 Search open and closed issues before filing. Never rewrite an issue's body: it breaks the thread that follows. New facts go in comments. When the comments change what the problem is, it is a different issue: close this one and file the new one.
 
