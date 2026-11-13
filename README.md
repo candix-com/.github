@@ -1,3 +1,3 @@
 # .github
 
-Candix's default issue forms, used by every repository in the organization that has none of its own. The `engineering:issues` skill in [candix-com/skills](https://github.com/candix-com/skills) says how to write each section.
+Candix's defaults for every repository in the organization that has none of its own: the issue forms, and [CONTRIBUTING.md](CONTRIBUTING.md), which says how an issue is filed and kept.
