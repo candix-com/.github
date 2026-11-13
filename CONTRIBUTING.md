@@ -4,22 +4,32 @@ How an issue is filed and kept in every Candix repository that has no guide of i
 
 ## Types
 
-- **Bug**: the code doesn't do what it's meant to.
-- **Feature**: the code should do something it doesn't do yet.
-- **Task**: any other piece of work, such as a refactor, setup or cleanup.
+- `Bug`: the code doesn't do what it's meant to.
+- `Feature`: the code should do something it doesn't do yet.
+- `Task`: any other piece of work, such as a refactor, setup or cleanup.
 
 ## The body
 
-- **The problem**: what is wrong or missing, as facts. Mark any idea about the cause or the fix as speculation.
-- **Found while**: what you were doing when you found it.
+- **The problem**: what is wrong or missing, as facts.
+- **Impact**: who or what it hurts, and how. If users can hit a bug, assume they are hitting it.
+- **Context**: what you were doing when you found it, and any idea about the cause or the fix, marked as speculation.
 
-Search open and closed issues before filing. Whoever filed an issue keeps its body up to date; everyone else comments.
+Search open and closed issues before filing. Never rewrite an issue's body: it breaks the thread that follows. New facts go in comments. When the comments change what the problem is, it is a different issue: close this one and file the new one.
 
 ## Fields
 
-- **Status**: New until it is triaged, then Waiting on owner, Ready or In progress. Closing the issue ends it.
-- **Priority**: Urgent when something users rely on is broken now. Otherwise High, Medium or Low, by how it ranks against the rest of the backlog.
-- **Effort**: Low is under an hour, Medium under half a day, High more.
+- **Status**: `New` until it is triaged, then `Waiting on owner`, `Ready` or `In progress`. Closing the issue ends it.
+- **Priority**:
+  - `Urgent`: security or data at risk, or a core flow broken with no workaround.
+  - `High`: a core flow broken with a workaround, or another flow broken with no workaround.
+  - `Medium`: another flow broken with a workaround, or a capability users need is missing.
+  - `Low`: nothing users can notice.
+
+  A core flow is what the product exists for: signing in, paying, and its main job.
+- **Effort**, by how much has to be worked out:
+  - `Low`: the change is fully known, and doing it is mechanical.
+  - `Medium`: the outcome is known, but getting there takes design.
+  - `High`: it changes something other code relies on, or the fix isn't known yet.
 - **Assignee**: whoever finishes the work.
 
 ## Links
