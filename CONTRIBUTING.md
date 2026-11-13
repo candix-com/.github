@@ -10,9 +10,9 @@ Search open and closed issues for the same problem. If it is already filed, comm
 
 Pick the type when filing:
 
-- `Bug`: the code doesn't do what it's meant to. It crashes, returns a wrong result, shows the wrong thing, or lets someone do what they shouldn't. For example: an expired sign-in code is still accepted.
-- `Feature`: the code should do something it doesn't do yet, for users or for the team. For example: users can't delete their account.
-- `Task`: anything that neither fixes a defect nor adds a capability. For example: a refactor, a dependency upgrade, a configuration change, a migration, or cleanup.
+- `Bug`: the code doesn't do what it's meant to. For example, an expired sign-in code is still accepted.
+- `Feature`: the code should do something it doesn't do yet. For example, users can't delete their account.
+- `Task`: any other work. For example, a refactor, an upgrade or a cleanup.
 
 ## Body
 
@@ -29,7 +29,7 @@ Who or what it hurts, and how. If users can hit a bug, assume they are hitting i
 
 ### Context
 
-What you were doing when you found it, and any idea about the cause or the fix, marked as speculation.
+What you were doing when you found it, and any guess at the cause or fix, marked as such.
 ```
 
 Once the issue is filed, don't edit the body: later comments answer it, and editing it breaks them. Add new facts as comments. If the comments change what the problem is, file a new issue for it and close this one as not planned, linking the new one.
@@ -67,6 +67,7 @@ Set Priority and Effort when filing.
 
 ## Closing
 
-- **When the work is done**: put `Closes #<n>` in the description of the pull request that does it, so merging it into the default branch closes the issue. If something else fixed it, close it as completed with a comment naming the commit or pull request.
+- **When a pull request resolves the issue**: put `Closes #<n>` in its description. Merging it into the default branch closes the issue.
+- **When something else already fixed it**: close it as completed, with a comment naming the commit or pull request.
 - **When it won't be done, or is no longer a problem**: close it as not planned, with a comment that says why: `gh issue close <n> --reason 'not planned'`.
 - **When another issue already describes the same problem**: copy anything this one adds into the other as a comment, then close this one as a duplicate of it: **Close as duplicate** on the issue page, or `gh issue close <n> --duplicate-of <m>`.
