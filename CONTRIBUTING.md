@@ -10,7 +10,7 @@ How an issue is filed and kept in every Candix repository that has no guide of i
 
 ## The body
 
-- **The problem**: what is wrong or missing, as facts. Mark any idea about the cause or the fix as speculation ([Mozilla](https://bugzilla.mozilla.org/page.cgi?id=bug-writing.html)).
+- **The problem**: what is wrong or missing, as facts. Mark any idea about the cause or the fix as speculation.
 - **Found while**: what you were doing when you found it.
 
 Search open and closed issues before filing. Whoever filed an issue keeps its body up to date; everyone else comments.
