@@ -5,10 +5,14 @@ body:
   - type: textarea
     attributes:
       label: The problem
-      description: What is wrong or missing, as facts. Mark any idea about the cause or the fix as speculation.
+      description: What is wrong or missing, as facts.
     validations:
       required: true
   - type: textarea
     attributes:
-      label: Found while
-      description: What you were doing when you found it.
+      label: Impact
+      description: Who or what it hurts, and how. If users can hit a bug, assume they are hitting it.
+  - type: textarea
+    attributes:
+      label: Context
+      description: What you were doing when you found it, and any idea about the cause or the fix, marked as speculation.
