@@ -26,7 +26,15 @@ Who or what it hurts, and how. If users can hit a bug, assume they are hitting i
 What you were doing when you found it, and any idea about the cause or the fix, marked as speculation.
 ```
 
-Search open and closed issues before filing. Never rewrite an issue's body: it breaks the thread that follows. New facts go in comments. When the comments change what the problem is, it is a different issue: close this one and file the new one.
+## Before filing
+
+Search open and closed issues for the same problem. If it is already filed, comment there instead.
+
+## After filing
+
+- Never rewrite the body: it breaks the thread that follows.
+- New facts go in comments.
+- When the comments change what the problem is, it is a different issue. Close this one and file the new one.
 
 ## Fields
 
