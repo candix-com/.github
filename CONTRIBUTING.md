@@ -47,11 +47,11 @@ Set Priority and Effort when filing.
   - `Low`: the change is fully known, and doing it is mechanical.
   - `Medium`: the outcome is known, but getting there takes design.
   - `High`: it changes something other code relies on, or the fix isn't known yet.
-- **Status**:
-  - `New`: leave it when filing. Triage moves it on.
-  - `Waiting on owner`: set it when only the repository's owner can unblock the issue, and ask them in a comment that mentions them. Set it to `Ready` once they have.
-  - `Ready`: set it when the issue is triaged and nothing about it is left to settle.
-  - `In progress`: set it when you start the work.
+- **Status**: set the one that's true.
+  - `New`: not triaged yet.
+  - `Waiting`: only the repository's owner can unblock it. Ask them in a comment that mentions them.
+  - `Ready`: triaged, with nothing left to settle.
+  - `Started`: someone is working on it.
 - **Assignee**: assign the issue to the person or agent who will do the work, once that is decided. Leave it unchanged while the issue waits on someone else: Status says that.
 
 ## Links
