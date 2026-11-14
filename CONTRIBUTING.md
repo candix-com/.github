@@ -25,7 +25,7 @@ What is wrong or missing, as facts.
 
 ### Impact
 
-Who or what it hurts, and how. Treat a bug users can hit as one they are hitting.
+Who or what it hurts, and how.
 
 ### Context
 
@@ -34,7 +34,7 @@ How it came up, and any guess at the cause or solution, marked as a guess.
 
 #### Priority
 
-Pick the first that applies:
+Pick the first that applies. Treat a bug users can hit as one they are hitting.
 
 - `Urgent`: a security hole, data lost or wrong, or users can't use the product at all.
 - `High`: users can't do something they need to, because of a bug or a missing capability.
@@ -43,18 +43,18 @@ Pick the first that applies:
 
 #### Effort
 
-Pick the first that applies:
+The expected number of changed lines, tests included:
 
-- `High`: the solution isn't known yet, or the change alters something other code relies on.
-- `Medium`: the outcome is known, but reaching it takes design.
-- `Low`: the change is fully known, and making it is mechanical.
+- `High`: over 1,000.
+- `Medium`: 100 to 1,000.
+- `Low`: under 100.
 
 ### Working
 
 #### Status
 
 - `New`: the issue isn't triaged yet. Every issue is filed with it.
-- `Waiting`: only @tavoyne can unblock the issue. Set it, and ask in a comment that mentions them.
+- `Waiting`: the issue needs an answer or action only @tavoyne can give. Set it, and ask in a comment that mentions them.
 - `Ready`: the issue is triaged, and nothing is left to settle.
 - `Started`: the assignee is doing the work. Set it when you start.
 
@@ -64,7 +64,7 @@ The assignee does the work. Assign @owreed, unless the work needs access @owreed
 
 #### Comments
 
-Don't edit the body once the issue is filed: the comments answer it as written. Add new facts as comments. If the comments change what the problem is, file a new issue and close this one as not planned, linking the new one.
+Don't edit the body once the issue is filed: the comments answer it as written. Add new facts as comments. If the comments change what the problem is, file a new issue and close this one, as Closing says.
 
 #### Links
 
@@ -74,7 +74,7 @@ Don't edit the body once the issue is filed: the comments answer it as written. 
   gh issue edit <parent> --add-sub-issue <child>
   ```
 
-- Blocked by: the issue makes sense on its own, but can't be finished until another closes. The blocker can be in any repository, an upstream project included; give its URL.
+- Blocked by: the issue makes sense on its own, but can't be finished until another closes. The blocker can be in any repository, an upstream project included; give its URL. It keeps its status while it waits.
 
   ```bash
   gh issue edit <blocked> --add-blocked-by <blocker>
@@ -83,7 +83,7 @@ Don't edit the body once the issue is filed: the comments answer it as written. 
 - Related: two issues are different problems in the same area or with the same cause.
 
   ```bash
-  id=$(gh api repos/<owner>/<repo>/issues/<other> --jq .id)
+  id=$(gh api repos/<other-owner>/<other-repo>/issues/<other> --jq .id)
   gh api repos/<owner>/<repo>/issues/<n>/relates_to -F issue_id=$id
   ```
 
@@ -95,6 +95,8 @@ Don't edit the body once the issue is filed: the comments answer it as written. 
 
 - Won't be done, or no longer a problem: close it as not planned, saying why.
 
+- Replaced by a new issue, because the problem changed: close it as not planned, linking the new one.
+
 - Duplicate: comment on the other with anything this issue adds, then close this one as its duplicate.
 
   ```bash
@@ -104,11 +106,6 @@ Don't edit the body once the issue is filed: the comments answer it as written. 
 ## Pull requests
 
 A pull request is squash-merged, with its title and description as the commit message.
-
-### Scope
-
-- Make one change a reviewer can follow in one reading.
-- Split a bigger change into stacked pull requests, each based on the branch of the one before.
 
 ### Title
 
@@ -154,4 +151,9 @@ Where to look first, and how the change was checked, in a few sentences, includi
 - Push each update as a new commit. Don't amend, rebase or force-push.
 - To bring in changes from the base branch, merge it in.
 - When the pull request changes what it does, rewrite the title and description to match. Don't append to them.
-- Mark it ready for review once the work is finished, the checks pass, and `/reviewers:review` has ended clean: every finding fixed, or turned down and listed in Choices.
+- Mark it ready for review once the work is finished, the checks pass, and `/reviewers:review` has ended clean: every finding fixed, or turned down and listed in Choices. @tavoyne reviews, approves and merges it.
+
+### Size
+
+- Make one change a reviewer can follow in one reading.
+- Split a bigger change into stacked pull requests, each based on the branch of the one before.
