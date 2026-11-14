@@ -62,7 +62,7 @@ Set Priority and Effort when filing.
   gh issue edit <parent> --add-sub-issue <n>
   ```
 
-- When the issue can't be finished until another one closes, mark it blocked by that one. The other issue can be in any repository, including an upstream project: give its URL.
+- When the issue can't be finished until a separate issue closes, one that isn't its sub-issue, mark it blocked by that one. A parent already waits on its sub-issues. The separate issue can be in any repository, including an upstream project: give its URL.
 
   ```bash
   gh issue edit <n> --add-blocked-by <m>
