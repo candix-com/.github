@@ -1,6 +1,6 @@
 # Contributing
 
-How issues and pull requests are handled in every Candix repository without a CONTRIBUTING.md of its own.
+How issues and pull requests are handled in every Candix repository, unless its own CONTRIBUTING.md says otherwise.
 
 ## Issues
 
