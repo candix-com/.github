@@ -107,7 +107,9 @@ A pull request is squash-merged, with its title and description as the commit me
 
 ### Opening
 
-Make one change a reviewer can follow in one reading. When its description can't stay under 2,500 characters, split it into stacked pull requests, each based on the branch of the one before. Open each as a draft.
+- Make one change a reviewer can follow in one reading.
+- When its description can't keep to the limit below, split it into stacked pull requests, each based on the branch of the one before.
+- Open it as a draft.
 
 #### Title
 
@@ -115,7 +117,7 @@ One imperative sentence under 72 characters, with no trailing period, that says 
 
 #### Description
 
-Write it for a reviewer who wasn't there, and for a developer reading it months later. Write it in this shape, leaving out any section with nothing to say:
+Write it in this shape, for a reviewer who wasn't there and a developer reading it months later. Leave out any section with nothing to say.
 
 ```md
 ### Problem
@@ -144,11 +146,12 @@ Where to look first, and how the change was checked, in a few sentences, includi
 
 - Keep it under 2,500 characters, not counting Choices.
 - Outside Choices, mention a design decision only if a reviewer needs it to approve. Leave out how the design evolved.
-- Put `Closes #<n>` in it for each issue the pull request resolves, as Closing an issue says.
+- Put `Closes #<n>` in it for each issue the pull request resolves.
 - Write plain sentences, with no em dashes.
 
 ### Working
 
-- Push each update as a new commit. Don't amend, rebase or force-push; to bring in changes from the base branch, merge it in.
+- Push each update as a new commit. Don't amend, rebase or force-push.
+- To bring in changes from the base branch, merge it in.
 - When the pull request changes what it does, rewrite the title and description to match. Don't append to them.
-- Mark it ready for review only when nothing is left but approval: the work is finished, the checks pass, and `/reviewers:review` (the `reviewers` plugin's Claude Code command) has ended clean, meaning every finding is fixed, or turned down and listed in Choices.
+- Mark it ready for review once the work is finished, the checks pass, and `/reviewers:review` has ended clean: every finding fixed, or turned down and listed in Choices.
