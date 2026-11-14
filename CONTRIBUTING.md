@@ -56,13 +56,42 @@ Set Priority and Effort when filing.
 
 ## Links
 
-- When the issue is a piece of work required to complete another, make it a sub-issue of that one: `gh issue edit <parent> --add-sub-issue <n>`.
-- When the issue can't be finished until another one closes, mark it blocked by that one: `gh issue edit <n> --add-blocked-by <m>`. The other issue can be in any repository, including an upstream project: give its URL.
-- When another issue is a different problem in the same area or with the same cause, link the two as related: `gh api repos/<owner>/<repo>/issues/<n>/relates_to -F issue_id=$(gh api repos/<owner>/<repo>/issues/<m> --jq .id)`.
+- When the issue is a piece of work required to complete another, make it a sub-issue of that one:
+
+  ```bash
+  gh issue edit <parent> --add-sub-issue <n>
+  ```
+
+- When the issue can't be finished until another one closes, mark it blocked by that one. The other issue can be in any repository, including an upstream project: give its URL.
+
+  ```bash
+  gh issue edit <n> --add-blocked-by <m>
+  ```
+
+- When another issue is a different problem in the same area or with the same cause, link the two as related:
+
+  ```bash
+  id=$(gh api repos/<owner>/<repo>/issues/<m> --jq .id)
+  gh api repos/<owner>/<repo>/issues/<n>/relates_to -F issue_id=$id
+  ```
 
 ## Closing
 
-- **When a pull request resolves the issue**: put `Closes #<n>` in its description. Merging it into the default branch closes the issue.
-- **When something else already fixed it**: close it as completed, with a comment naming the commit or pull request.
-- **When it won't be done, or is no longer a problem**: close it as not planned, with a comment that says why: `gh issue close <n> --reason 'not planned'`.
-- **When another issue already describes the same problem**: copy anything this one adds into the other as a comment, then close this one as a duplicate of it: **Close as duplicate** on the issue page, or `gh issue close <n> --duplicate-of <m>`.
+- When a pull request resolves the issue, put `Closes #<n>` in its description. Merging it into the default branch closes the issue.
+- When something else already fixed it, close it as completed, naming the commit or pull request:
+
+  ```bash
+  gh issue close <n> --reason completed --comment '<what fixed it>'
+  ```
+
+- When it won't be done, or is no longer a problem, close it as not planned, saying why:
+
+  ```bash
+  gh issue close <n> --reason 'not planned' --comment '<why>'
+  ```
+
+- When another issue already describes the same problem, copy anything this one adds into the other as a comment, then close this one as a duplicate of it:
+
+  ```bash
+  gh issue close <n> --duplicate-of <m>
+  ```
