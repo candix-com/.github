@@ -16,7 +16,7 @@ Search open and closed issues first. If the problem is already filed, comment th
 
 Write the body in this shape. Only Problem is required.
 
-```
+```md
 ### Problem
 
 What is wrong or missing, as facts.
