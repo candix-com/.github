@@ -89,7 +89,7 @@ Don't edit the body once the issue is filed: the comments answer it as written. 
 
 ### Closing
 
-- Fixed by a pull request: put `Closes #<n>` in its description, or `Closes <owner>/<repo>#<n>` for an issue in another repository. The issue closes when the pull request merges into the default branch.
+- Fixed by a pull request: it closes when the pull request merges into the default branch.
 
 - Fixed some other way: close it as completed, naming the commit or pull request.
 
@@ -105,17 +105,16 @@ Don't edit the body once the issue is filed: the comments answer it as written. 
 
 A pull request is squash-merged, with its title and description as the commit message.
 
-### Opening
+### Scope
 
 - Make one change a reviewer can follow in one reading.
-- When its description can't keep to the limit below, split it into stacked pull requests, each based on the branch of the one before.
-- Open it as a draft.
+- Split a bigger change into stacked pull requests, each based on the branch of the one before.
 
-#### Title
+### Title
 
 One imperative sentence under 72 characters, with no trailing period, that says what the change does: "Post briefs entering review to the app events Slack channel", not "Slack alerts" or "Address review".
 
-#### Description
+### Description
 
 Write it in this shape, for a reviewer who wasn't there and a developer reading it months later. Leave out any section with nothing to say.
 
@@ -139,18 +138,19 @@ Where to look first, and how the change was checked, in a few sentences, includi
 <details>
 <summary>Choices</summary>
 
-- Each design decision the sections above leave out that a future reader may need, including review findings turned down, with its reason.
+- Other design decisions a future reader may need, and review findings turned down, each with its reason.
 
 </details>
 ```
 
 - Keep it under 2,500 characters, not counting Choices.
 - Outside Choices, mention a design decision only if a reviewer needs it to approve. Leave out how the design evolved.
-- Put `Closes #<n>` in it for each issue the pull request resolves.
+- Put `Closes #<n>` in it for each issue the pull request resolves, or `Closes <owner>/<repo>#<n>` for an issue in another repository.
 - Write plain sentences, with no em dashes.
 
 ### Working
 
+- Open it as a draft.
 - Push each update as a new commit. Don't amend, rebase or force-push.
 - To bring in changes from the base branch, merge it in.
 - When the pull request changes what it does, rewrite the title and description to match. Don't append to them.
