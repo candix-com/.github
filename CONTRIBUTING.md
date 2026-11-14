@@ -56,7 +56,7 @@ Pick the first that applies:
 
 ### Assignee
 
-Assign whoever will do the work, person or agent, once that is decided. Don't reassign the issue to the owner while it is `Waiting`: the status already says so.
+Assign the issue to @owreed, or to @tavoyne when @tavoyne does the work. Don't reassign it to @tavoyne while it is `Waiting`: the status already says so.
 
 ### Comments
 
