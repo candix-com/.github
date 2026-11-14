@@ -1,97 +1,109 @@
 # Issues
 
-How to file and keep an issue in every Candix repository that has no guide of its own.
+How issues are filed, worked and closed in every Candix repository without a CONTRIBUTING.md of its own.
 
-## Before filing
+## Filing
 
-Search open and closed issues for the same problem. If it is already filed, comment there instead of filing.
+Search open and closed issues first. If the problem is already filed, comment there instead.
 
-## Type
+### Type
 
-Pick the type when filing:
+- `Bug`: the code doesn't do what it's meant to, such as accepting an expired sign-in code.
+- `Feature`: the code should do something it doesn't do yet, such as letting users delete their account.
+- `Task`: any other work, such as a refactor, an upgrade or a cleanup.
 
-- `Bug`: the code doesn't do what it's meant to. For example, an expired sign-in code is still accepted.
-- `Feature`: the code should do something it doesn't do yet. For example, users can't delete their account.
-- `Task`: any other work. For example, a refactor, an upgrade or a cleanup.
+### Body
 
-## Body
-
-Write the body in this shape. The issue forms produce it; write it the same way when filing from the API:
+The issue forms write the body in this shape. Without a form, with `gh` or the API, write it yourself. Only Problem is required.
 
 ```
-### The problem
+### Problem
 
 What is wrong or missing, as facts.
 
 ### Impact
 
-Who or what it hurts, and how. If users can hit a bug, assume they are hitting it.
+Who or what it hurts, and how.
 
 ### Context
 
-What you were doing when you found it, and any guess at the cause or fix, marked as such.
+How it came up, and any guess at the cause or solution, marked as a guess.
 ```
 
-Once the issue is filed, don't edit the body: later comments answer it, and editing it breaks them. Add new facts as comments. If the comments change what the problem is, file a new issue for it and close this one as not planned, linking the new one.
+For a bug users can hit, assume they are hitting it.
 
-## Fields
+### Priority
 
-Set Priority and Effort when filing.
+Pick the first that applies:
 
-- **Priority**, from the Impact:
-  - `Urgent`: a security hole, data lost or wrong (money included), or users can't use the product at all.
-  - `High`: a bug users can hit: something they do fails or gives a wrong result.
-  - `Medium`: a missing capability users need, or a bug only the team can hit (tests, tooling, dev setup).
-  - `Low`: nothing anyone notices: cleanup, refactors, internals.
-- **Effort**, from how much has to be worked out:
-  - `Low`: the change is fully known, and doing it is mechanical.
-  - `Medium`: the outcome is known, but getting there takes design.
-  - `High`: it changes something other code relies on, or the fix isn't known yet.
-- **Status**:
-  - `New`: leave it when filing. Triage sets the next one.
-  - `Waiting`: set it when only the repository's owner can unblock the issue, and ask them in a comment that mentions them. Set it to `Ready` once they have.
-  - `Ready`: set it when the issue is triaged and nothing is left to settle.
-  - `Started`: set it when you start the work.
-- **Assignee**: assign the issue to the person or agent who will do the work, once that is decided. Leave it unchanged while the issue waits on someone else: Status says that.
+- `Urgent`: a security hole, data lost or wrong (money included), or users can't use the product at all.
+- `High`: a bug users can hit, where something they do fails or gives a wrong result.
+- `Medium`: a missing capability users want, or a bug only the team can hit, in tests, tooling or the dev setup.
+- `Low`: anything else, such as a cleanup, a refactor or a change to internals.
 
-## Links
+### Effort
 
-- When the issue is a piece of work required to complete another, make it a sub-issue of that one:
+Effort is how much has to be worked out, not how long the work takes. Pick the first that applies:
+
+- `High`: the solution isn't known yet, or the change alters something other code relies on.
+- `Medium`: the outcome is known, but reaching it takes design.
+- `Low`: the change is fully known, and making it is mechanical.
+
+## Working
+
+### Status
+
+- `New`: the issue isn't triaged yet. Every issue is filed with it.
+- `Waiting`: only the owner, @tavoyne, can unblock the issue. Set it, ask them in a comment that mentions them, and set `Ready` once they answer.
+- `Ready`: the issue is triaged, and nothing is left to settle.
+- `Started`: someone is doing the work. Set it when you start.
+
+### Assignee
+
+Assign whoever will do the work, person or agent, once that is decided. Don't reassign the issue to the owner while it is `Waiting`: the status already says so.
+
+### Comments
+
+Don't edit the body once the issue is filed: the comments answer it as written. Add new facts as comments. If the comments change what the problem is, file a new issue and close this one as not planned, linking the new one.
+
+### Links
+
+- Sub-issue: the issue only makes sense as part of another.
 
   ```bash
-  gh issue edit <parent> --add-sub-issue <n>
+  gh issue edit <parent> --add-sub-issue <child>
   ```
 
-- When the issue can't be finished until another one closes, mark it blocked by that one. The other issue can be in any repository, including an upstream project: give its URL.
+- Blocked by: the issue makes sense on its own, but can't be finished until another closes. The blocker can be in any repository, an upstream project included; give its URL.
 
   ```bash
-  gh issue edit <n> --add-blocked-by <m>
+  gh issue edit <blocked> --add-blocked-by <blocker>
   ```
 
-- When another issue is a different problem in the same area or with the same cause, link the two as related:
+- Related: two issues are different problems in the same area or with the same cause.
 
   ```bash
-  id=$(gh api repos/<owner>/<repo>/issues/<m> --jq .id)
+  id=$(gh api repos/<owner>/<repo>/issues/<other> --jq .id)
   gh api repos/<owner>/<repo>/issues/<n>/relates_to -F issue_id=$id
   ```
 
 ## Closing
 
-- When a pull request resolves the issue, put `Closes #<n>` in its description. Merging it into the default branch closes the issue.
-- When something else already fixed it, close it as completed, naming the commit or pull request:
+- Fixed by a pull request: put `Closes #<n>` in its description, or `Closes <owner>/<repo>#<n>` for an issue in another repository. The issue closes when the pull request merges into the default branch.
+- Fixed some other way: close it as completed, naming the commit or pull request.
 
   ```bash
   gh issue close <n> --reason completed --comment '<what fixed it>'
   ```
 
-- When it won't be done, or is no longer a problem, close it as not planned, saying why:
+- Won't be done, or no longer a problem: close it as not planned, saying why.
 
   ```bash
   gh issue close <n> --reason 'not planned' --comment '<why>'
   ```
 
-- When another issue already describes the same problem, copy anything this one adds into the other as a comment, then close this one as a duplicate of it:
+- Duplicate: add anything this issue adds to the other as a comment, then close this one as its duplicate.
 
   ```bash
-  gh issue close <n> --duplicate-of <m>
+  gh issue close <n> --duplicate-of <other>
   ```

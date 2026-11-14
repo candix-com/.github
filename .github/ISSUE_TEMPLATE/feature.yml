@@ -4,15 +4,15 @@ type: Feature
 body:
   - type: textarea
     attributes:
-      label: The problem
+      label: Problem
       description: What is wrong or missing, as facts.
     validations:
       required: true
   - type: textarea
     attributes:
       label: Impact
-      description: Who or what it hurts, and how. If users can hit a bug, assume they are hitting it.
+      description: Who or what it hurts, and how.
   - type: textarea
     attributes:
       label: Context
-      description: What you were doing when you found it, and any guess at the cause or fix, marked as such.
+      description: How it came up, and any guess at the cause or solution, marked as a guess.
