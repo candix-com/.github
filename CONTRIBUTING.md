@@ -50,7 +50,7 @@ Pick the first that applies:
 ### Status
 
 - `New`: the issue isn't triaged yet. Every issue is filed with it.
-- `Waiting`: only the owner, @tavoyne, can unblock the issue. Set it, ask them in a comment that mentions them, and set `Ready` once they answer.
+- `Waiting`: only the owner, @tavoyne, can unblock the issue. Set it, and ask them in a comment that mentions them.
 - `Ready`: the issue is triaged, and nothing is left to settle.
 - `Started`: someone is doing the work. Set it when you start.
 
