@@ -145,6 +145,11 @@ Where to look first, and how the change was checked, in a few sentences, includi
 - Put `Closes #<n>` in it for each issue the pull request resolves, or `Closes <owner>/<repo>#<n>` for an issue in another repository.
 - Write plain sentences, with no em dashes.
 
+### Size
+
+- Make one change a reviewer can follow in one reading.
+- Split a bigger change into stacked pull requests, each based on the branch of the one before.
+
 ### Working
 
 - Open it as a draft.
@@ -152,8 +157,3 @@ Where to look first, and how the change was checked, in a few sentences, includi
 - To bring in changes from the base branch, merge it in.
 - When the pull request changes what it does, rewrite the title and description to match. Don't append to them.
 - Mark it ready for review once the work is finished, the checks pass, and `/reviewers:review` has ended clean: every finding fixed, or turned down and listed in Choices. @tavoyne reviews, approves and merges it.
-
-### Size
-
-- Make one change a reviewer can follow in one reading.
-- Split a bigger change into stacked pull requests, each based on the branch of the one before.
