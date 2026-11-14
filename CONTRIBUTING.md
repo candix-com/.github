@@ -23,14 +23,12 @@ What is wrong or missing, as facts.
 
 ### Impact
 
-Who or what it hurts, and how.
+Who or what it hurts, and how. Treat a bug users can hit as one they are hitting.
 
 ### Context
 
 How it came up, and any guess at the cause or solution, marked as a guess.
 ```
-
-For a bug users can hit, assume they are hitting it.
 
 ### Priority
 
