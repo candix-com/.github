@@ -1,8 +1,8 @@
-# Issues
+# Contributing
 
-How issues are filed, worked and closed in every Candix repository without a CONTRIBUTING.md of its own.
+How issues and pull requests are handled in every Candix repository without a CONTRIBUTING.md of its own.
 
-## Filing
+## Filing an issue
 
 Search open and closed issues first. If the problem is already filed, comment there instead.
 
@@ -47,7 +47,7 @@ Pick the first that applies:
 - `Medium`: the outcome is known, but reaching it takes design.
 - `Low`: the change is fully known, and making it is mechanical.
 
-## Working
+## Working on an issue
 
 ### Status
 
@@ -85,7 +85,7 @@ Don't edit the body once the issue is filed: the comments answer it as written. 
   gh api repos/<owner>/<repo>/issues/<n>/relates_to -F issue_id=$id
   ```
 
-## Closing
+## Closing an issue
 
 - Fixed by a pull request: put `Closes #<n>` in its description, or `Closes <owner>/<repo>#<n>` for an issue in another repository. The issue closes when the pull request merges into the default branch.
 
@@ -98,3 +98,47 @@ Don't edit the body once the issue is filed: the comments answer it as written. 
   ```bash
   gh issue close <n> --duplicate-of <other>
   ```
+
+## Pull requests
+
+- A pull request makes one change a reviewer can hold in their head at once. When the description can't fit it, split it into pull requests stacked on each other.
+- Open it as a draft. Mark it ready only when nothing is left but approval: the work is finished, the checks pass, and `/reviewers:review` has ended clean.
+- Push each change as a new commit. Don't amend or force-push: the pull request is squash-merged, with its title and description as the commit message.
+
+### Title
+
+One imperative sentence under 72 characters, with no trailing period, that says what the change does: "Post briefs entering review to the app events Slack channel", never "Slack alerts" or "Address review".
+
+### Description
+
+Write it for a reviewer who wasn't there, and for a developer reading it months later. Use this shape, leaving out any section with nothing to say:
+
+```md
+### Problem
+
+What was wrong or missing, and for whom.
+
+### What changes
+
+The behavior or structure it adds or changes. A table when listing several similar items.
+
+### Worth knowing
+
+One-line bullets for what a reviewer must not miss: limitations, deploy prerequisites, surprising behavior, anything not done or not verified.
+
+### Reviewing
+
+Where to look first, and how the change was checked.
+
+<details>
+<summary>Choices</summary>
+
+- Each other design decision a future reader may need, including review findings turned down, with its reason.
+
+</details>
+```
+
+- Keep it under 2,500 characters, not counting Choices.
+- Outside Choices, mention a design decision only if a reviewer needs it to approve.
+- Leave out how the design evolved.
+- When review changes the pull request, rewrite the description to match. Never append to it.
