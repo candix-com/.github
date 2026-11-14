@@ -120,7 +120,7 @@ Write it for a reviewer who wasn't there, and for a developer reading it months 
 ```md
 ### Problem
 
-What was wrong or missing, and for whom.
+What was wrong or missing, and for whom, in a few sentences.
 
 ### What changes
 
@@ -132,7 +132,7 @@ One-line bullets for what a reviewer must not miss: limitations, deploy prerequi
 
 ### Reviewing
 
-Where to look first, and how the change was checked.
+Where to look first, and how the change was checked, in a few sentences, including whether `/reviewers:review` ended clean.
 
 <details>
 <summary>Choices</summary>
@@ -146,3 +146,4 @@ Where to look first, and how the change was checked.
 - Outside Choices, mention a design decision only if a reviewer needs it to approve.
 - Leave out how the design evolved.
 - When review changes the pull request, rewrite the description to match. Never append to it.
+- Plain sentences, no em dashes.
