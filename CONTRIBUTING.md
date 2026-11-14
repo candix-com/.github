@@ -52,13 +52,13 @@ Pick the first that applies:
 ### Status
 
 - `New`: the issue isn't triaged yet. Every issue is filed with it.
-- `Waiting`: only the owner, @tavoyne, can unblock the issue. Set it, and ask them in a comment that mentions them.
+- `Waiting`: only @tavoyne can unblock the issue. Set it, and ask in a comment that mentions them.
 - `Ready`: the issue is triaged, and nothing is left to settle.
 - `Started`: the assignee is doing the work. Set it when you start.
 
 ### Assignee
 
-The assignee is whoever does the work. Assign @owreed, unless the work needs access @owreed doesn't have, such as creating a resource in Azure, signing up for a vendor account or changing a repository's branch rules. Then assign @tavoyne.
+The assignee does the work. Assign @owreed, unless the work needs access @owreed lacks, such as creating a resource in Azure, signing up for a vendor account or changing a repository's branch rules. Then assign @tavoyne.
 
 ### Comments
 
@@ -88,17 +88,10 @@ Don't edit the body once the issue is filed: the comments answer it as written. 
 ## Closing
 
 - Fixed by a pull request: put `Closes #<n>` in its description, or `Closes <owner>/<repo>#<n>` for an issue in another repository. The issue closes when the pull request merges into the default branch.
+
 - Fixed some other way: close it as completed, naming the commit or pull request.
 
-  ```bash
-  gh issue close <n> --reason completed --comment '<what fixed it>'
-  ```
-
 - Won't be done, or no longer a problem: close it as not planned, saying why.
-
-  ```bash
-  gh issue close <n> --reason 'not planned' --comment '<why>'
-  ```
 
 - Duplicate: comment on the other with anything this issue adds, then close this one as its duplicate.
 
