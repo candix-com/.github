@@ -38,7 +38,7 @@ Once the issue is filed, don't edit the body: later comments answer it, and edit
 
 Set Priority and Effort when filing.
 
-- **Priority**, from the Impact:
+- **Priority**:
   - `Urgent`: a security hole, data lost or wrong (money included), or users can't use the product at all.
   - `High`: a bug users can hit: something they do fails or gives a wrong result.
   - `Medium`: a missing capability users need, or a bug only the team can hit (tests, tooling, dev setup).
