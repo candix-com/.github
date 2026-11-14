@@ -105,11 +105,6 @@ Don't edit the body once the issue is filed: the comments answer it as written. 
 
 A pull request is squash-merged, with its title and description as the commit message.
 
-### Scope
-
-- Make one change a reviewer can follow in one reading.
-- Split a bigger change into stacked pull requests, each based on the branch of the one before.
-
 ### Title
 
 One imperative sentence under 72 characters, with no trailing period, that says what the change does: "Post briefs entering review to the app events Slack channel", not "Slack alerts" or "Address review".
@@ -155,3 +150,8 @@ Where to look first, and how the change was checked, in a few sentences, includi
 - To bring in changes from the base branch, merge it in.
 - When the pull request changes what it does, rewrite the title and description to match. Don't append to them.
 - Mark it ready for review once the work is finished, the checks pass, and `/reviewers:review` has ended clean: every finding fixed, or turned down and listed in Choices.
+
+### Size
+
+- Make one change a reviewer can follow in one reading.
+- Split a bigger change into stacked pull requests, each based on the branch of the one before.
