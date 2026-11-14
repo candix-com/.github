@@ -14,7 +14,7 @@ Search open and closed issues first. If the problem is already filed, comment th
 
 ### Body
 
-The issue forms write the body in this shape. Without a form, with `gh` or the API, write it yourself. Only Problem is required.
+Write the body in this shape. Only Problem is required.
 
 ```
 ### Problem
@@ -36,14 +36,12 @@ For a bug users can hit, assume they are hitting it.
 
 Pick the first that applies:
 
-- `Urgent`: a security hole, data lost or wrong (money included), or users can't use the product at all.
+- `Urgent`: a security hole, data lost or wrong, or users can't use the product at all.
 - `High`: users can't do something they need to: a bug in it, or the capability is missing.
 - `Medium`: an improvement to something users can already do, or a bug in tests, tooling or the dev setup.
 - `Low`: anything else, such as a cleanup, a refactor or a change to internals.
 
 ### Effort
-
-Effort is how much has to be worked out, not how long the work takes. Pick the first that applies:
 
 - `High`: the solution isn't known yet, or the change alters something other code relies on.
 - `Medium`: the outcome is known, but reaching it takes design.
