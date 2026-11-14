@@ -56,7 +56,7 @@ Pick the first that applies:
 
 ### Assignee
 
-The assignee is whoever does the work: @owreed, or @tavoyne when the work needs access @owreed doesn't have, such as creating a resource in Azure, signing up for a vendor account or changing a repository's branch rules.
+The assignee is whoever does the work. Assign @owreed, unless the work needs access @owreed doesn't have, such as creating a resource in Azure, signing up for a vendor account or changing a repository's branch rules. Then assign @tavoyne.
 
 ### Comments
 
