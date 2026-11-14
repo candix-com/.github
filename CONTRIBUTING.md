@@ -35,11 +35,13 @@ How it came up, and any guess at the cause or solution, marked as a guess.
 Pick the first that applies:
 
 - `Urgent`: a security hole, data lost or wrong, or users can't use the product at all.
-- `High`: users can't do something they need to: a bug in it, or the capability is missing.
+- `High`: users can't do something they need to, because of a bug or a missing capability.
 - `Medium`: an improvement to something users can already do, or a bug in tests, tooling or the dev setup.
 - `Low`: anything else, such as a cleanup, a refactor or a change to internals.
 
 ### Effort
+
+Pick the first that applies:
 
 - `High`: the solution isn't known yet, or the change alters something other code relies on.
 - `Medium`: the outcome is known, but reaching it takes design.
@@ -52,11 +54,11 @@ Pick the first that applies:
 - `New`: the issue isn't triaged yet. Every issue is filed with it.
 - `Waiting`: only the owner, @tavoyne, can unblock the issue. Set it, and ask them in a comment that mentions them.
 - `Ready`: the issue is triaged, and nothing is left to settle.
-- `Started`: someone is doing the work. Set it when you start.
+- `Started`: the assignee is doing the work. Set it when you start.
 
 ### Assignee
 
-Assign the issue to @owreed, or to @tavoyne when @tavoyne does the work. Don't reassign it to @tavoyne while it is `Waiting`: the status already says so.
+The assignee is whoever does the work. Assign @owreed, unless the work needs access @owreed doesn't have, such as creating a resource in Azure, signing up for a vendor account or changing a repository's branch rules. Then assign @tavoyne.
 
 ### Comments
 
@@ -98,7 +100,7 @@ Don't edit the body once the issue is filed: the comments answer it as written. 
   gh issue close <n> --reason 'not planned' --comment '<why>'
   ```
 
-- Duplicate: add anything this issue adds to the other as a comment, then close this one as its duplicate.
+- Duplicate: comment on the other with anything this issue adds, then close this one as its duplicate.
 
   ```bash
   gh issue close <n> --duplicate-of <other>
