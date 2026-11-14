@@ -1,5 +1,3 @@
-# Candix
-
 ## About
 
 Candix is the attention market for engineers.
