@@ -56,7 +56,7 @@ Pick the first that applies:
 
 ### Assignee
 
-Assign the issue to @owreed, or to @tavoyne when the work needs access @owreed doesn't have, such as creating a resource in Azure, signing up for a vendor account or changing an organization setting. Don't reassign it to @tavoyne while it is `Waiting`: the status already says so.
+Assign the issue to @owreed, or to @tavoyne when the work needs access @owreed doesn't have, such as creating a resource in Azure, signing up for a vendor account or changing a repository's branch rules. Don't reassign it to @tavoyne while it is `Waiting`: the status already says so.
 
 ### Comments
 
