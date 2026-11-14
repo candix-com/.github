@@ -54,7 +54,7 @@ Effort is how much has to be worked out, not how long the work takes. Pick the f
 ### Status
 
 - `New`: the issue isn't triaged yet. Every issue is filed with it.
-- `Waiting`: only the repository's owner can unblock the issue. Set it, ask them in a comment that mentions them, and set `Ready` once they answer.
+- `Waiting`: only the owner, @tavoyne, can unblock the issue. Set it, ask them in a comment that mentions them, and set `Ready` once they answer.
 - `Ready`: the issue is triaged, and nothing is left to settle.
 - `Started`: someone is doing the work. Set it when you start.
 
