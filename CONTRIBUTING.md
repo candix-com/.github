@@ -43,7 +43,7 @@ Pick the first that applies. Treat a bug users can hit as one they are hitting.
 
 #### Effort
 
-The expected number of changed lines, tests included, not counting generated files or lock files:
+The expected number of changed lines, tests included:
 
 - `High`: over 1,000.
 - `Medium`: 100 to 1,000.
