@@ -11,7 +11,7 @@ body:
   - type: textarea
     attributes:
       label: Impact
-      description: Who or what it hurts, and how. For a bug users can hit, assume they are hitting it.
+      description: Who or what it hurts, and how. Treat a bug users can hit as one they are hitting.
   - type: textarea
     attributes:
       label: Context
