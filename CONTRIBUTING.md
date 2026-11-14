@@ -88,6 +88,7 @@ Don't edit the body once the issue is filed: the comments answer it as written. 
 ## Closing
 
 - Fixed by a pull request: put `Closes #<n>` in its description, or `Closes <owner>/<repo>#<n>` for an issue in another repository. The issue closes when the pull request merges into the default branch.
+
 - Fixed some other way: close it as completed, naming the commit or pull request.
 
 - Won't be done, or no longer a problem: close it as not planned, saying why.
