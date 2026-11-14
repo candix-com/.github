@@ -18,7 +18,7 @@ Pick the type when filing:
 
 Write the body in this shape. The issue forms produce it; write it the same way when filing from the API:
 
-```markdown
+```
 ### The problem
 
 What is wrong or missing, as facts.
@@ -58,12 +58,7 @@ Set Priority and Effort when filing.
 
 - When the issue is a piece of work required to complete another, make it a sub-issue of that one: `gh issue edit <parent> --add-sub-issue <n>`.
 - When the issue can't be finished until another one closes, mark it blocked by that one: `gh issue edit <n> --add-blocked-by <m>`. The other issue can be in any repository, including an upstream project: give its URL.
-- When another issue is a different problem in the same area or with the same cause, link the two as related. `gh issue edit` has no option for it, so call the API with the other issue's id:
-
-  ```bash
-  id=$(gh api repos/<owner>/<repo>/issues/<m> --jq .id)
-  gh api repos/<owner>/<repo>/issues/<n>/relates_to -F issue_id=$id
-  ```
+- When another issue is a different problem in the same area or with the same cause, link the two as related: `gh api repos/<owner>/<repo>/issues/<n>/relates_to -F issue_id=$(gh api repos/<owner>/<repo>/issues/<m> --jq .id)`.
 
 ## Closing
 
