@@ -43,11 +43,11 @@ Pick the first that applies. Treat a bug users can hit as one they are hitting.
 
 #### Effort
 
-Pick the first that applies:
+The expected number of changed lines, tests included:
 
-- `High`: the solution isn't known yet, or the change alters something other code relies on.
-- `Medium`: the outcome is known, but reaching it takes design.
-- `Low`: the change is fully known, and making it is mechanical.
+- `High`: over 1,000.
+- `Medium`: 100 to 1,000.
+- `Low`: under 100.
 
 ### Working
 
