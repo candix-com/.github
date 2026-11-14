@@ -37,8 +37,8 @@ For a bug users can hit, assume they are hitting it.
 Pick the first that applies:
 
 - `Urgent`: a security hole, data lost or wrong (money included), or users can't use the product at all.
-- `High`: a bug users can hit, where something they do fails or gives a wrong result.
-- `Medium`: a missing capability users want, or a bug only the team can hit, in tests, tooling or the dev setup.
+- `High`: users can't do something they need to: a bug in it, or the capability is missing.
+- `Medium`: an improvement to something users can already do, or a bug in tests, tooling or the dev setup.
 - `Low`: anything else, such as a cleanup, a refactor or a change to internals.
 
 ### Effort
