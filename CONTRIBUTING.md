@@ -8,6 +8,16 @@ How issues and pull requests are handled in every Candix repository.
 
 Search open and closed issues first. If the problem is already filed, comment there instead.
 
+Otherwise, file it with one request, which sets the fields below:
+
+```bash
+gh api repos/candix-com/<repo>/issues -f title='<title>' -f body='<body>' -f type=<type> \
+  -F 'issue_field_values[][field_id]=36918742' -f 'issue_field_values[][value]=<priority>' \
+  -F 'issue_field_values[][field_id]=36918745' -f 'issue_field_values[][value]=<effort>'
+```
+
+To change them later, send the same `issue_field_values` with `gh api -X PATCH repos/candix-com/<repo>/issues/<n>`.
+
 #### Type
 
 - `Bug`: the code doesn't do what it's meant to, such as accepting an expired sign-in code.
@@ -48,18 +58,6 @@ The expected number of changed lines, tests included:
 - `High`: over 1,000.
 - `Medium`: 100 to 1,000.
 - `Low`: under 100.
-
-#### Command
-
-`gh issue create` can't set Priority and Effort, so file the issue with one request:
-
-```bash
-gh api repos/candix-com/<repo>/issues -f title='<title>' -f body='<body>' -f type=<type> \
-  -F 'issue_field_values[][field_id]=36918742' -f 'issue_field_values[][value]=<priority>' \
-  -F 'issue_field_values[][field_id]=36918745' -f 'issue_field_values[][value]=<effort>'
-```
-
-To change them later, send the same `issue_field_values` with `gh api -X PATCH repos/candix-com/<repo>/issues/<n>`.
 
 ### Working
 
