@@ -66,9 +66,9 @@ Once a day, triage takes each `New` issue. It checks the issue against the code,
 
 The assignee does the work. Assign @owreed, unless the work needs access @owreed lacks, such as creating a resource in Azure, signing up for a vendor account or changing a repository's branch rules. Then assign @tavoyne.
 
-#### Comments
+#### Updates
 
-Don't edit the body once the issue is filed: the comments answer it as written. Add new facts as comments. If the comments change what the problem is, file a new issue and close this one, as Closing says.
+Edit the body only while the issue has no comments. Once it has one, the comments answer the body as written, so add new facts as comments instead. If the comments change what the problem is, file a new issue and close this one, as Closing says.
 
 #### Links
 
