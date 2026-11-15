@@ -63,8 +63,10 @@ The expected number of changed lines, tests included:
 
 #### Status
 
-- `Waiting`: the issue needs an answer or action only the owner can give. Set it, and ask in a comment that mentions them.
-- `Ready`: nothing is left to settle, and the work can start.
+- `Waiting`: the issue needs an answer only the owner can give. Set it, and ask in a comment that mentions them.
+- `Ready`: nothing is left to settle, and the work can start. It stays `Ready` while the work is under way.
+
+Clearing the Status sends the issue back to triage. Clear it, with a comment that says why, once the owner has answered a `Waiting` issue, or when an issue turns out not to be what triage settled.
 
 #### Triage
 
