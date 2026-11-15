@@ -87,7 +87,7 @@ Edit the body only while the issue has no comments. Once it has one, the comment
   gh issue edit <parent> --add-sub-issue <child>
   ```
 
-- Blocked by: the issue makes sense on its own, but its work can't start until another closes. The blocker can be in any repository, an upstream project included; give its URL. It keeps its status while it waits.
+- Blocked by: the issue makes sense on its own, but waits on another. The blocker can be in any repository, an upstream project included; give its URL. It keeps its status while it waits.
 
   ```bash
   gh issue edit <blocked> --add-blocked-by <blocker>
