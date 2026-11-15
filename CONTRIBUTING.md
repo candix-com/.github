@@ -63,14 +63,13 @@ The expected number of changed lines, tests included:
 
 #### Status
 
-- `New`: the status every issue is filed with.
 - `Waiting`: the issue needs an answer or action only @tavoyne can give. Set it, and ask in a comment that mentions them.
 - `Ready`: nothing is left to settle, and the work can start.
 - `Started`: the assignee is doing the work. Set it when you start.
 
 #### Triage
 
-Once a day, triage takes each `New` issue. It checks the issue against the code, digs for deeper problems, links related issues, and corrects the type, Priority and Effort where needed. Then it sets the issue to `Waiting` or `Ready`, or closes it, for example as a duplicate.
+Once a day, triage takes each issue with no Status. It checks the issue against the code, digs for deeper problems, links related issues, and corrects the type, Priority and Effort where needed. Then it sets the issue to `Waiting` or `Ready`, or closes it, for example as a duplicate.
 
 #### Assignee
 
