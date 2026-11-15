@@ -60,7 +60,7 @@ The expected number of changed lines, tests included:
 
 #### Triage
 
-Once a day, triage checks each `New` issue against the code, including whether it states the real problem. It links related issues, corrects the fields, and sets `Waiting` or `Ready`, or closes the issue.
+Once a day, triage takes each `New` issue. It checks the issue against the code, including whether it states the real problem, links related issues, and corrects the type, Priority and Effort where needed. Then it sets the issue to `Waiting` or `Ready`, or closes it, for example as a duplicate.
 
 #### Assignee
 
