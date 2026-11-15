@@ -1,6 +1,6 @@
 # Contributing
 
-How issues and pull requests are handled in every Candix repository.
+How issues and pull requests are handled in every Candix repository. @owreed is the agent, and @tavoyne is the owner.
 
 ## Issues
 
@@ -61,11 +61,9 @@ The expected number of changed lines, tests included:
 
 ### Working
 
-@owreed is the agent, and @tavoyne is the owner.
-
 #### Status
 
-- `Waiting`: the issue needs an answer or action only @tavoyne can give. Set it, and ask in a comment that mentions them.
+- `Waiting`: the issue needs an answer or action only the owner can give. Set it, and ask in a comment that mentions them.
 - `Ready`: nothing is left to settle. The work can start once no open issue blocks it and it has no open sub-issue.
 - `Started`: the assignee is doing the work. Set it when you start.
 
@@ -75,7 +73,7 @@ Once a day, triage takes each issue with no Status. It checks the issue against 
 
 #### Assignee
 
-The assignee does the work. Assign @owreed, unless the work needs access @owreed lacks, such as creating a resource in Azure, signing up for a vendor account or changing a repository's branch rules. Then assign @tavoyne.
+The assignee does the work. Assign the agent, unless the work needs access the agent lacks, such as creating a resource in Azure, signing up for a vendor account or changing a repository's branch rules. Then assign the owner.
 
 #### Updates
 
@@ -89,7 +87,7 @@ Edit the body only while the issue has no comments. Once it has one, the comment
   gh issue edit <parent> --add-sub-issue <child>
   ```
 
-- Blocked by: the issue makes sense on its own, but can't be finished until another closes. The blocker can be in any repository, an upstream project included; give its URL. It keeps its status while it waits.
+- Blocked by: the issue makes sense on its own, but its work can't start until another closes. The blocker can be in any repository, an upstream project included; give its URL. It keeps its status while it waits.
 
   ```bash
   gh issue edit <blocked> --add-blocked-by <blocker>
@@ -171,4 +169,4 @@ Where to look first, and how the change was checked, in a few sentences, includi
 - Push each update as a new commit. Don't amend, rebase or force-push.
 - To bring in changes from the base branch, merge it in.
 - When the pull request changes what it does, rewrite the title and description to match. Don't append to them.
-- Mark it ready for review once the work is finished, the checks pass, and `/reviewers:review` has ended clean: every finding fixed, or turned down and listed in Choices. @tavoyne reviews, approves and merges it.
+- Mark it ready for review once the work is finished, the checks pass, and `/reviewers:review` has ended clean: every finding fixed, or turned down and listed in Choices. The owner reviews, approves and merges it.
