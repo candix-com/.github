@@ -12,8 +12,8 @@ Otherwise, file it with one request, which sets the fields below:
 
 ```bash
 gh api repos/candix-com/<repo>/issues -f title='<title>' -f body='<body>' -f type=<type> \
-  -F 'issue_field_values[][field_id]=36918742' -f 'issue_field_values[][value]=<priority>' \
-  -F 'issue_field_values[][field_id]=36918745' -f 'issue_field_values[][value]=<effort>'
+  -F 'issue_field_values[][field_id]=36918742' -F 'issue_field_values[][value]=<priority>' \
+  -F 'issue_field_values[][field_id]=36918745' -F 'issue_field_values[][value]=<effort>'
 ```
 
 To change them later, send the same `issue_field_values` with `gh api -X PATCH repos/candix-com/<repo>/issues/<n>`.
