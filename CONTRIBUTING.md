@@ -61,10 +61,12 @@ The expected number of changed lines, tests included:
 
 ### Working
 
+@owreed is the agent, and @tavoyne is the owner.
+
 #### Status
 
 - `Waiting`: the issue needs an answer or action only @tavoyne can give. Set it, and ask in a comment that mentions them.
-- `Ready`: nothing is left to settle, and the work can start.
+- `Ready`: nothing is left to settle. The work can start once no open issue blocks it and it has no open sub-issue.
 - `Started`: the assignee is doing the work. Set it when you start.
 
 #### Triage
