@@ -63,12 +63,8 @@ The expected number of changed lines, tests included:
 
 #### Status
 
-File an issue with no Status.
-
 - `Waiting`: the issue needs an answer or action only the owner can give. Set it, and ask in a comment that mentions them.
-- `Ready`: nothing is left to settle. The work can start once no open issue blocks it and it has no open sub-issue.
-
-An issue with an open pull request that closes it is being worked.
+- `Ready`: nothing is left to settle, and the work can start.
 
 #### Triage
 
@@ -90,7 +86,7 @@ Edit the body only while the issue has no comments. Once it has one, the comment
   gh issue edit <parent> --add-sub-issue <child>
   ```
 
-- Blocked by: the issue makes sense on its own, but waits on another. The blocker can be in any repository, an upstream project included; give its URL. It keeps its status while it waits.
+- Blocked by: the issue makes sense on its own, but can't be finished until another closes. The blocker can be in any repository, an upstream project included; give its URL. It keeps its status while it waits.
 
   ```bash
   gh issue edit <blocked> --add-blocked-by <blocker>
