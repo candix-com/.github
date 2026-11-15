@@ -8,13 +8,15 @@ How issues and pull requests are handled in every Candix repository.
 
 Search open and closed issues first. If the problem is already filed, comment there instead.
 
-Otherwise, file it with one request, which sets the fields below:
+Otherwise, write the title to `title.txt` and the body to `body.md`, so the shell never reads their text, then file it with one request, which sets the fields below:
 
 ```bash
-gh api repos/candix-com/<repo>/issues -f title='<title>' -f body='<body>' -f type=<type> \
+gh api repos/candix-com/<repo>/issues -f title="$(cat title.txt)" -F body=@body.md -f type=<type> \
   -F 'issue_field_values[][field_id]=36918742' -F 'issue_field_values[][value]=<priority>' \
   -F 'issue_field_values[][field_id]=36918745' -F 'issue_field_values[][value]=<effort>'
 ```
+
+Every `issue_field_values` key uses `-F`: gh sends `-f` fields before `-F` fields, so mixing them separates each id from its value.
 
 To change them later, send the same `issue_field_values` with `gh api -X PATCH repos/candix-com/<repo>/issues/<n>`.
 
