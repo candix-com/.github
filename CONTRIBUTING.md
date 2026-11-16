@@ -8,7 +8,7 @@ How issues and pull requests are handled in every Candix repository.
 
 Search open and closed issues first. If the problem is already filed, comment there instead.
 
-Otherwise, write the issue as JSON to a file: `gh api` flags can't keep each field id paired with its value, and quotes in the issue's text can break a shell command. Then create the issue with one request, which also sets the fields below:
+Otherwise, write the issue as JSON to a file with an editor or a file-writing tool, not the shell. That way its text never passes through a shell, and each field id sits in one object with its value. Create the issue with one request, which also sets the fields below:
 
 ```json
 {
