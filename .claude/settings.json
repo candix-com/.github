@@ -1,0 +1,17 @@
+{
+  "enabledPlugins": {
+    "cloudflare@candix": true,
+    "engineering@candix": true,
+    "maintainer@candix": true,
+    "reviewers@candix": true
+  },
+  "extraKnownMarketplaces": {
+    "candix": {
+      "autoUpdate": true,
+      "source": {
+        "repo": "candix-com/skills",
+        "source": "github"
+      }
+    }
+  }
+}
