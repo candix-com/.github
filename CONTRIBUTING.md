@@ -90,8 +90,6 @@ The Triage field says whether an issue can be worked:
 
 Once a day, triage takes each open issue with no Triage value. It checks the issue against the code, digs for deeper problems, links related issues, and corrects the type, Priority and Effort where needed. Then it sets Triage to `Waiting` or `Ready`, or closes the issue, for example as a duplicate.
 
-Clear the Triage value, with a comment that says why, once the owner has answered a `Waiting` issue.
-
 #### Assignee
 
 The assignee does the work. Assign the agent, unless the work needs access the agent lacks, such as creating a resource in Azure, signing up for a vendor account or changing a repository's branch rules. Then assign the owner.
