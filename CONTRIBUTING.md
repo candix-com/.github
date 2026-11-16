@@ -81,16 +81,16 @@ The expected number of changed lines, tests included:
 
 ### Working
 
-#### Status
+#### Triage
+
+The Triage field says whether an issue can be worked:
 
 - `Waiting`: the issue needs an answer only the owner can give. Set it, and ask in a comment that mentions them.
 - `Ready`: nothing is left to settle, and the work can start.
 
-Clear the Status, with a comment that says why, once the owner has answered a `Waiting` issue, or when an issue turns out not to be what triage settled.
+Once a day, triage takes each open issue with no Triage value. It checks the issue against the code, digs for deeper problems, links related issues, and corrects the type, Priority and Effort where needed. Then it sets Triage to `Waiting` or `Ready`, or closes the issue, for example as a duplicate.
 
-#### Triage
-
-Once a day, triage takes each open issue with no Status. It checks the issue against the code, digs for deeper problems, links related issues, and corrects the type, Priority and Effort where needed. Then it sets the issue to `Waiting` or `Ready`, or closes it, for example as a duplicate.
+Clear the Triage value, with a comment that says why, once the owner has answered a `Waiting` issue, or when an issue turns out not to be what triage settled.
 
 #### Assignee
 
