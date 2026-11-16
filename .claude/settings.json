@@ -1,6 +1,5 @@
 {
   "enabledPlugins": {
-    "cloudflare@candix": true,
     "engineering@candix": true,
     "maintainer@candix": true,
     "reviewers@candix": true
