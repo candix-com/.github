@@ -8,15 +8,35 @@ How issues and PRs are handled in every Candix repository. @owreed is the agent,
 
 Search open and closed issues first. If the problem is already filed, comment there instead.
 
-Otherwise, file it with one request, which sets the fields below:
+Otherwise, write the issue as JSON to a file with an editor or a file-writing tool, not the shell. That way its text never passes through a shell, and each field id sits in one object with its value. Create the issue with one request, which also sets the fields below:
 
-```bash
-gh api repos/candix-com/<repo>/issues -f title='<title>' -f body='<body>' -f type=<type> \
-  -F 'issue_field_values[][field_id]=36918742' -f 'issue_field_values[][value]=<priority>' \
-  -F 'issue_field_values[][field_id]=36918745' -f 'issue_field_values[][value]=<effort>'
+```json
+{
+  "title": "<title>",
+  "body": "<body>",
+  "type": "<type>",
+  "issue_field_values": [
+    { "field_id": 36918742, "value": "<priority>" },
+    { "field_id": 36918745, "value": "<effort>" }
+  ]
+}
 ```
 
-To change them later, send the same `issue_field_values` with `gh api -X PATCH repos/candix-com/<repo>/issues/<n>`.
+```bash
+gh api repos/candix-com/<repo>/issues --input <file>
+```
+
+To set fields on an existing issue, write `{ "issue_field_values": [...] }` to a file and post it to the issue's `issue-field-values` endpoint. Fields the file leaves out keep their values, but an empty array clears them all.
+
+```bash
+gh api repos/candix-com/<repo>/issues/<n>/issue-field-values --input <file>
+```
+
+To clear a field:
+
+```bash
+gh api -X DELETE repos/candix-com/<repo>/issues/<n>/issue-field-values/<field-id>
+```
 
 #### Type
 
