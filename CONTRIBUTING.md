@@ -1,6 +1,6 @@
 # Contributing
 
-How issues and pull requests are handled in every Candix repository. @owreed is the agent, and @tavoyne is the owner.
+How issues and PRs are handled in every Candix repository. @owreed is the agent, and @tavoyne is the owner.
 
 ## Issues
 
