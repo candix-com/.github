@@ -92,7 +92,7 @@ Once a day, triage takes each open issue with no Triage value. It checks the iss
 
 #### Assignee
 
-The assignee is whoever does the work. For automated handling, leave it empty: it will be picked up and assigned at triage. If you're a human and intend to handle it yourself instead, assign yourself.
+The assignee is whoever does the work. For automated handling, leave it empty: it will be picked up and assigned at triage. If you’re a human who plans to handle it yourself, assign yourself instead.
 
 #### Updates
 
