@@ -1,6 +1,6 @@
 # Contributing
 
-How issues and PRs are handled in every Candix repository. @owreed is the agent, and @tavoyne is the owner.
+How issues and pull requests are handled in every Candix repository. @tavoyne is the maintainer: they answer what only they can, and review and merge every pull request.
 
 ## Issues
 
@@ -8,35 +8,7 @@ How issues and PRs are handled in every Candix repository. @owreed is the agent,
 
 Search open and closed issues first. If the problem is already filed, comment there instead.
 
-Otherwise, write the issue as JSON to a file with an editor or a file-writing tool, not the shell. That way its text never passes through a shell, and each field id sits in one object with its value. Create the issue with one request, which also sets the fields below:
-
-```json
-{
-  "title": "<title>",
-  "body": "<body>",
-  "type": "<type>",
-  "issue_field_values": [
-    { "field_id": 36918742, "value": "<priority>" },
-    { "field_id": 36918745, "value": "<effort>" }
-  ]
-}
-```
-
-```bash
-gh api repos/candix-com/<repo>/issues --input <file>
-```
-
-To set fields on an existing issue, write `{ "issue_field_values": [...] }` to a file and post it to the issue's `issue-field-values` endpoint. Fields the file leaves out keep their values, but an empty array clears them all.
-
-```bash
-gh api repos/candix-com/<repo>/issues/<n>/issue-field-values --input <file>
-```
-
-To clear a field:
-
-```bash
-gh api -X DELETE repos/candix-com/<repo>/issues/<n>/issue-field-values/<field-id>
-```
+Otherwise, file it with a title, a type and a body, through the issue form, or by writing the body to a file and running `gh issue create --type <type> --body-file <file>`, so its text never passes through a shell. Leave Priority, Effort and Triage to triage.
 
 #### Type
 
@@ -85,10 +57,22 @@ The expected number of changed lines, tests included:
 
 The Triage field says whether an issue can be worked:
 
-- `Waiting`: the issue needs an answer only the owner can give. Set it, and ask in a comment that mentions them.
+- `Waiting`: the issue needs an answer only the maintainer can give. Set it, and ask in a comment that mentions them.
 - `Ready`: nothing is left to settle, and the work can start.
 
-Once a day, triage takes each open issue with no Triage value. It checks the issue against the code, digs for deeper problems, links related issues, and corrects the type, Priority and Effort where needed. Then it sets Triage to `Waiting` or `Ready`, or closes the issue, for example as a duplicate.
+Triage takes each open issue with no Triage value. It checks the issue against the code, digs for deeper problems, links related issues, and corrects the type, Priority and Effort where needed. Then it sets Triage to `Waiting` or `Ready`, or closes the issue, for example as a duplicate.
+
+Priority, Effort and Triage are issue fields. `gh api orgs/{owner}/issue-fields` lists each field's id and options. To set one:
+
+```bash
+echo '{"issue_field_values": [{"field_id": <id>, "value": "<option>"}]}' | gh api repos/{owner}/{repo}/issues/<n>/issue-field-values --input -
+```
+
+Fields left out of the request keep their values, but an empty array clears them all. To clear one:
+
+```bash
+gh api -X DELETE repos/{owner}/{repo}/issues/<n>/issue-field-values/<id>
+```
 
 #### Assignee
 
@@ -96,17 +80,11 @@ The assignee is whoever does the work. For automated handling, leave it empty: i
 
 #### Updates
 
-Edit the body only while the issue has no comments. Once it has one, the comments answer the body as written, so add new facts as comments instead. If the comments change what the problem is, file a new issue and close this one, as Closing says.
+Add what you learn as a comment (`gh issue comment <n> --body-file <file>`), and leave the body as its filer wrote it. If the comments change what the problem is, file a new issue and close this one, as Closing says.
 
 #### Links
 
-- Sub-issue: the issue only makes sense as part of another.
-
-  ```bash
-  gh issue edit <parent> --add-sub-issue <child>
-  ```
-
-- Blocked by: the issue makes sense on its own, but can't be finished until another closes. The blocker can be in any repository, an upstream project included; give its URL. It keeps its status while it waits.
+- Blocked by: the issue makes sense on its own, but can't be finished until another closes. The blocker can be in any repository, an upstream project included; give its URL. It keeps its Triage value while it waits.
 
   ```bash
   gh issue edit <blocked> --add-blocked-by <blocker>
@@ -120,6 +98,8 @@ Edit the body only while the issue has no comments. Once it has one, the comment
   ```
 
 ### Closing
+
+When an issue closes in favor of another, as a replacement or a duplicate, first move any issue it blocks onto the other.
 
 - Fixed by a pull request: it closes when the pull request merges into the default branch.
 
@@ -162,7 +142,7 @@ One-line bullets for what a reviewer must not miss: limitations, deploy prerequi
 
 ### Reviewing
 
-Where to look first, and how the change was checked, in a few sentences, including whether `/reviewers:review` ended clean.
+Where to look first, and how the change was checked, in a few sentences.
 
 <details>
 <summary>Choices</summary>
@@ -179,8 +159,8 @@ Where to look first, and how the change was checked, in a few sentences, includi
 
 ### Size
 
-- Make one change a reviewer can follow in one reading.
-- Split a bigger change into stacked pull requests, each based on the branch of the one before.
+- Make one change a reviewer can follow in one reading, targeting the default branch.
+- Work bigger than one pull request is several issues, each blocked by the one it builds on.
 
 ### Working
 
@@ -188,4 +168,5 @@ Where to look first, and how the change was checked, in a few sentences, includi
 - Push each update as a new commit. Don't amend, rebase or force-push.
 - To bring in changes from the base branch, merge it in.
 - When the pull request changes what it does, rewrite the title and description to match. Don't append to them.
-- Mark it ready for review once the work is finished, the checks pass, and `/reviewers:review` has ended clean: every finding fixed, or turned down and listed in Choices. The owner reviews, approves and merges it.
+- Mark it ready for review once the work is finished and the checks pass. The maintainer reviews it: they approve and merge it, or request changes in a review.
+
