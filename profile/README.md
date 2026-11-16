@@ -1,4 +1,4 @@
-## Welcome
+# Welcome
 
 Candix is the attention market for engineers.
 
