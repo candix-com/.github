@@ -1,6 +1,6 @@
 # Contributing
 
-How issues and pull requests are handled in every Candix repository.
+How issues and pull requests are handled in every Candix repository. @owreed is the agent, and @tavoyne is the owner.
 
 ## Issues
 
@@ -63,18 +63,18 @@ The expected number of changed lines, tests included:
 
 #### Status
 
-- `New`: the status every issue is filed with.
-- `Waiting`: the issue needs an answer or action only @tavoyne can give. Set it, and ask in a comment that mentions them.
+- `Waiting`: the issue needs an answer only the owner can give. Set it, and ask in a comment that mentions them.
 - `Ready`: nothing is left to settle, and the work can start.
-- `Started`: the assignee is doing the work. Set it when you start.
+
+Clear the Status, with a comment that says why, once the owner has answered a `Waiting` issue, or when an issue turns out not to be what triage settled.
 
 #### Triage
 
-Once a day, triage takes each `New` issue. It checks the issue against the code, digs for deeper problems, links related issues, and corrects the type, Priority and Effort where needed. Then it sets the issue to `Waiting` or `Ready`, or closes it, for example as a duplicate.
+Once a day, triage takes each open issue with no Status. It checks the issue against the code, digs for deeper problems, links related issues, and corrects the type, Priority and Effort where needed. Then it sets the issue to `Waiting` or `Ready`, or closes it, for example as a duplicate.
 
 #### Assignee
 
-The assignee does the work. Assign @owreed, unless the work needs access @owreed lacks, such as creating a resource in Azure, signing up for a vendor account or changing a repository's branch rules. Then assign @tavoyne.
+The assignee does the work. Assign the agent, unless the work needs access the agent lacks, such as creating a resource in Azure, signing up for a vendor account or changing a repository's branch rules. Then assign the owner.
 
 #### Updates
 
@@ -170,4 +170,4 @@ Where to look first, and how the change was checked, in a few sentences, includi
 - Push each update as a new commit. Don't amend, rebase or force-push.
 - To bring in changes from the base branch, merge it in.
 - When the pull request changes what it does, rewrite the title and description to match. Don't append to them.
-- Mark it ready for review once the work is finished, the checks pass, and `/reviewers:review` has ended clean: every finding fixed, or turned down and listed in Choices. @tavoyne reviews, approves and merges it.
+- Mark it ready for review once the work is finished, the checks pass, and `/reviewers:review` has ended clean: every finding fixed, or turned down and listed in Choices. The owner reviews, approves and merges it.
