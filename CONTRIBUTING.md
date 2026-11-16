@@ -64,13 +64,13 @@ The expected number of changed lines, tests included:
 #### Status
 
 - `Waiting`: the issue needs an answer only the owner can give. Set it, and ask in a comment that mentions them.
-- `Ready`: nothing is left to settle, and the work can start. It stays `Ready` while the work is under way.
+- `Ready`: nothing is left to settle, and the work can start.
 
-Clearing the Status sends the issue back to triage. Clear it, with a comment that says why, once the owner has answered a `Waiting` issue, or when an issue turns out not to be what triage settled.
+Clear the Status, with a comment that says why, once the owner has answered a `Waiting` issue, or when an issue turns out not to be what triage settled.
 
 #### Triage
 
-Once a day, triage takes each issue with no Status. It checks the issue against the code, digs for deeper problems, links related issues, and corrects the type, Priority and Effort where needed. Then it sets the issue to `Waiting` or `Ready`, or closes it, for example as a duplicate.
+Once a day, triage takes each open issue with no Status. It checks the issue against the code, digs for deeper problems, links related issues, and corrects the type, Priority and Effort where needed. Then it sets the issue to `Waiting` or `Ready`, or closes it, for example as a duplicate.
 
 #### Assignee
 
