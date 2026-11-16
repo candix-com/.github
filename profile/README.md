@@ -10,7 +10,7 @@ The full rules are in [CONTRIBUTING.md](https://github.com/candix-com/.github/bl
 
 - Types: `Bug`, `Feature`, `Task`.
 - Body: Problem, Impact, Context.
-- Status: none until triage, then `Ready`, or `Waiting` on @tavoyne.
+- Triage: none until triage, then `Ready`, or `Waiting` on @tavoyne.
 - Priority: `Urgent`, `High`, `Medium`, `Low`. Effort: under 100, 100 to 1,000, or over 1,000 changed lines.
 
 ### Pull requests
