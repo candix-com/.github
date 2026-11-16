@@ -8,7 +8,7 @@ How issues and pull requests are handled in every Candix repository.
 
 Search open and closed issues first. If the problem is already filed, comment there instead.
 
-Otherwise, write the issue as JSON to a file, so quotes in its text cannot break the command. Then create it with one request, which also sets the fields below:
+Otherwise, write the issue as JSON to a file: `gh api` flags can't keep each field id paired with its value, and quotes in the issue's text can break a shell command. Then create the issue with one request, which also sets the fields below:
 
 ```json
 {
@@ -26,7 +26,7 @@ Otherwise, write the issue as JSON to a file, so quotes in its text cannot break
 gh api repos/candix-com/<repo>/issues --input <file>
 ```
 
-To set fields on an existing issue, write `{ "issue_field_values": [...] }` to a file and send it to the issue's field values. Fields the file leaves out keep their values, but an empty array clears them all.
+To set fields on an existing issue, write `{ "issue_field_values": [...] }` to a file and post it to the issue's `issue-field-values` endpoint. Fields the file leaves out keep their values, but an empty array clears them all.
 
 ```bash
 gh api repos/candix-com/<repo>/issues/<n>/issue-field-values --input <file>
