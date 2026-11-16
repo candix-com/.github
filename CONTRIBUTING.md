@@ -92,7 +92,7 @@ Once a day, triage takes each open issue with no Triage value. It checks the iss
 
 #### Assignee
 
-The assignee does the work. Assign the agent, unless the work needs access the agent lacks, such as creating a resource in Azure, signing up for a vendor account or changing a repository's branch rules. Then assign the owner.
+The assignee is whoever does the work. For automated handling, leave it empty: it will be picked up and assigned at triage. If you're a human and intend to handle it yourself instead, assign yourself.
 
 #### Updates
 
