@@ -8,7 +8,7 @@ How issues and pull requests are handled in every Candix repository.
 
 Search open and closed issues first. If the problem is already filed, comment there instead.
 
-Otherwise, write the request to a file and file it with one request, which sets the fields below:
+Otherwise, write the issue as JSON to a file, so quotes in its text cannot break the command. Then create it with one request, which also sets the fields below:
 
 ```json
 {
@@ -26,7 +26,17 @@ Otherwise, write the request to a file and file it with one request, which sets 
 gh api repos/candix-com/<repo>/issues --input <file>
 ```
 
-To set fields later, send `{ "issue_field_values": [...] }` the same way with `gh api repos/candix-com/<repo>/issues/<n>/issue-field-values --input <file>`, which keeps the fields it leaves out. To clear one, run `gh api -X DELETE repos/candix-com/<repo>/issues/<n>/issue-field-values/<field id>`.
+To set fields on an existing issue, write `{ "issue_field_values": [...] }` to a file and send it to the issue's field values. Fields the file leaves out keep their values, but an empty array clears them all.
+
+```bash
+gh api repos/candix-com/<repo>/issues/<n>/issue-field-values --input <file>
+```
+
+To clear a field:
+
+```bash
+gh api -X DELETE repos/candix-com/<repo>/issues/<n>/issue-field-values/<field-id>
+```
 
 #### Type
 
