@@ -6,7 +6,7 @@ How issues and pull requests are handled in every Candix repository.
 
 ### Filing
 
-ALWAYS search open and closed issues first. If the problem is already filed, edit that issue or comment on it instead. Leave Priority, Effort and Triage to triage.
+ALWAYS search open and closed issues first. If the problem is already filed, edit that issue or comment on it instead.
 
 #### Type
 
@@ -34,6 +34,8 @@ How it came up, and any guess at the cause or solution, marked as a guess.
 
 ### Fields
 
+Triage sets these fields.
+
 #### Priority
 
 How much the problem hurts users:
@@ -59,7 +61,7 @@ The expected number of changed lines, tests included:
 
 #### Assignee
 
-The assignee is whoever does the work. For automated handling, leave it empty: it will be picked up and assigned at triage. If you’re a human who plans to handle it yourself, assign yourself instead.
+The assignee is whoever does the work.
 
 ### Working
 
