@@ -1,6 +1,6 @@
 # Contributing
 
-How issues and pull requests are handled in every Candix repository. @tavoyne is the maintainer: they answer what only they can, and review and merge every pull request.
+How issues and pull requests are handled in every Candix repository. @tavoyne is the owner: they answer what only they can, and review and merge every pull request.
 
 ## Issues
 
@@ -8,7 +8,7 @@ How issues and pull requests are handled in every Candix repository. @tavoyne is
 
 Search open and closed issues first. If the problem is already filed, comment there instead.
 
-Otherwise, file it with a title, a type and a body, through the issue form, or by writing the body to a file and running `gh issue create --type <type> --body-file <file>`, so its text never passes through a shell. Leave Priority, Effort and Triage to triage.
+Otherwise, file it with a title, a type and a body, through the issue form, or by writing the body to a file and running `gh issue create --type <type> --body-file <file>`, so its body never passes through a shell. Leave Priority, Effort and Triage to triage.
 
 #### Type
 
@@ -57,7 +57,7 @@ The expected number of changed lines, tests included:
 
 The Triage field says whether an issue can be worked:
 
-- `Waiting`: the issue needs an answer only the maintainer can give. Set it, and ask in a comment that mentions them.
+- `Waiting`: the issue needs an answer only the owner can give. Set it, and ask in a comment that mentions them.
 - `Ready`: nothing is left to settle, and the work can start.
 
 Triage takes each open issue with no Triage value. It checks the issue against the code, digs for deeper problems, links related issues, and corrects the type, Priority and Effort where needed. Then it sets Triage to `Waiting` or `Ready`, or closes the issue, for example as a duplicate.
@@ -168,5 +168,5 @@ Where to look first, and how the change was checked, in a few sentences.
 - Push each update as a new commit. Don't amend, rebase or force-push.
 - To bring in changes from the base branch, merge it in.
 - When the pull request changes what it does, rewrite the title and description to match. Don't append to them.
-- Mark it ready for review once the work is finished and the checks pass. The maintainer reviews it: they approve and merge it, or request changes in a review.
+- Mark it ready for review once the work is finished and the checks pass. The owner reviews it: they approve and merge it, or request changes in a review.
 
