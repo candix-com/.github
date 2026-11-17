@@ -32,6 +32,8 @@ Who or what it hurts, and how.
 How it came up, and any guess at the cause or solution, marked as a guess.
 ```
 
+### Fields
+
 #### Priority
 
 How much the problem hurts users:
@@ -49,8 +51,6 @@ The expected number of changed lines, tests included:
 - `Medium`: 100 to 1,000.
 - `Low`: under 100.
 
-### Working
-
 #### Triage
 
 - No value: the issue hasn't been triaged yet.
@@ -60,6 +60,8 @@ The expected number of changed lines, tests included:
 #### Assignee
 
 The assignee is whoever does the work. For automated handling, leave it empty: it will be picked up and assigned at triage. If you’re a human who plans to handle it yourself, assign yourself instead.
+
+### Working
 
 #### Updates
 
