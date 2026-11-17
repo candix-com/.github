@@ -6,7 +6,7 @@ How issues and pull requests are handled in every Candix repository.
 
 ### Filing
 
-Search open and closed issues first. If the problem is already filed, comment there instead. Leave Priority, Effort and Triage to triage.
+ALWAYS search open and closed issues first. If the problem is already filed, edit that issue or comment on it instead. Leave Priority, Effort and Triage to triage.
 
 #### Type
 
