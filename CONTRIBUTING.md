@@ -1,6 +1,6 @@
 # Contributing
 
-How issues and pull requests are handled in every Candix repository. @tavoyne is the owner: they answer what only they can, and review and merge every pull request.
+How issues and pull requests are handled in every Candix repository. The owner, @candix-com/maintainers, answers what only they can, and reviews and merges every pull request.
 
 ## Issues
 
@@ -57,7 +57,7 @@ The expected number of changed lines, tests included:
 
 The Triage field says whether an issue can be worked:
 
-- `Waiting`: the issue needs an answer only the owner can give. Set it, and ask in a comment that mentions them.
+- `Waiting`: the issue needs something only the owner can give, such as an answer or access. Set it, and ask in a comment that mentions them.
 - `Ready`: nothing is left to settle, and the work can start.
 
 Triage takes each open issue with no Triage value. It checks the issue against the code, digs for deeper problems, links related issues, and corrects the type, Priority and Effort where needed. Then it sets Triage to `Waiting` or `Ready`, or closes the issue, for example as a duplicate.
