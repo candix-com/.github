@@ -10,12 +10,12 @@ The full rules are in [CONTRIBUTING.md](https://github.com/candix-com/.github/bl
 
 - Types: `Bug`, `Feature`, `Task`.
 - Body: Problem, Impact, Context.
-- Triage: none until triage, then `Ready`, or `Waiting` on the owner.
+- Triage: none until triage, then `Ready`, or `Waiting` on a human.
 - Priority: `Urgent`, `High`, `Medium`, `Low`. Effort: under 100, 100 to 1,000, or over 1,000 changed lines.
 
 ### Pull requests
 
 - One imperative title under 72 characters.
 - Description: Problem, What changes, Worth knowing, Reviewing.
-- One change per pull request, into the default branch.
-- Draft until the work is finished and the checks pass. The owner reviews and merges.
+- One change per pull request.
+- Draft until it's ready to merge.
