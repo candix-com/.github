@@ -67,12 +67,11 @@ Edit the body only while the issue has no comments. After that, comment.
 
 #### Links
 
-- Blocked by: can't be finished until another issue, in any repository, closes.
+- Blocked by: another issue, here or upstream, has to be resolved first.
 - Related: a different problem in the same area or with the same cause.
 
 ### Closing
 
-- Fixed by a pull request: it closes on merge.
 - Fixed some other way: close it as completed, naming the fix.
 - Won't be done, or no longer a problem: close it as not planned, saying why.
 - Replaced, because the problem changed: close it as not planned, linking the new issue.
