@@ -34,7 +34,7 @@ How it came up, and any guess at the cause or solution, marked as a guess.
 
 ### Fields
 
-Triage sets these fields.
+Triage sets these fields. Don't set them yourself.
 
 #### Priority
 
