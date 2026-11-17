@@ -8,7 +8,7 @@ How issues and pull requests are handled in every Candix repository. @tavoyne is
 
 Search open and closed issues first. If the problem is already filed, comment there instead.
 
-Otherwise, file it with a title, a type and a body, through the issue form, or by writing the body to a file and running `gh issue create --type <type> --title <title> --body-file <file>`, so its body never passes through a shell. Leave Priority, Effort and Triage to triage.
+Otherwise, file it with a title, a type and a body, through the issue form or `gh issue create --type <type>`. Leave Priority, Effort and Triage to triage.
 
 #### Type
 
@@ -80,7 +80,7 @@ The assignee is whoever does the work. For automated handling, leave it empty: i
 
 #### Updates
 
-Add what you learn as a comment (`gh issue comment <n> --body-file <file>`), and leave the body as its filer wrote it. If the comments change what the problem is, file a new issue and close this one, as Closing says.
+Add what you learn as a comment, and leave the body as its filer wrote it. If the comments change what the problem is, file a new issue and close this one, as Closing says.
 
 #### Links
 
