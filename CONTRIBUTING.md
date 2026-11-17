@@ -1,6 +1,6 @@
 # Contributing
 
-How issues and pull requests are handled in every Candix repository. The owner, @candix-com/maintainers, answers what only they can, and reviews and merges every pull request.
+How issues and pull requests are handled in every Candix repository.
 
 ## Issues
 
