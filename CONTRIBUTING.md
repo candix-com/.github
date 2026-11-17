@@ -71,8 +71,8 @@ Edit the body while the issue has no comments. Once someone comments, add new in
 
 #### Links
 
-- Blocked by: another issue, here or upstream, has to be resolved first.
-- Related: another issue is a different problem in the same area or with the same cause.
+- If another issue, here or upstream, has to be resolved first, mark this one as blocked by it.
+- If another issue is a different problem in the same area or with the same cause, mark them as related.
 
 ### Closing
 
