@@ -59,7 +59,7 @@ The expected number of changed lines, tests included:
 
 #### Assignee
 
-The assignee is whoever does the work. Leave it empty and triage will assign it, or assign yourself if you're taking it.
+The assignee is whoever does the work. For automated handling, leave it empty: it will be picked up and assigned at triage. If you’re a human who plans to handle it yourself, assign yourself instead.
 
 #### Updates
 
