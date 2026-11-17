@@ -78,8 +78,8 @@ Edit the body while the issue has no comments. Once someone comments, add new in
 
 - If it was fixed outside a pull request, close it as completed and name the fix.
 - If it won't be done or is no longer a problem, close it as not planned and say why.
-- If the problem changed, file a new issue, then close this one as not planned and link the new one.
-- If it duplicates another issue, add anything it brings to the other one, then close it as a duplicate.
+- If the problem changed, file a new issue, then close this one as not planned and link it.
+- If it duplicates another issue, add what it brings to that issue, then close it as a duplicate.
 
 ## Pull requests
 
