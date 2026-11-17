@@ -55,7 +55,7 @@ The expected number of changed lines, tests included:
 
 - No value: the issue hasn't been triaged yet.
 - `Waiting`: the issue depends on a human to move forward.
-- `Ready`: the issue can be worked on.
+- `Ready`: nothing is left to settle, and the work can start.
 
 #### Assignee
 
