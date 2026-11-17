@@ -6,7 +6,7 @@ How issues and pull requests are handled in every Candix repository.
 
 ### Filing
 
-ALWAYS search open and closed issues first. If the problem is already filed, edit that issue or comment on it instead.
+Always search open and closed issues first. If the problem is already filed, edit that issue or comment on it instead.
 
 #### Type
 
