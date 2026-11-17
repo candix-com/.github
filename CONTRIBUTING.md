@@ -63,7 +63,7 @@ Whoever does the work. Leave it empty for triage, or assign yourself.
 
 #### Updates
 
-Edit the body only while the issue has no comments. After that, comment.
+Edit the body while the issue has no comments. Once someone comments, add new information as a comment, so the conversation stays readable.
 
 #### Links
 
