@@ -76,10 +76,10 @@ Edit the body while the issue has no comments. Once someone comments, add new in
 
 ### Closing
 
-- Fixed some other way: close it as completed, naming the fix.
-- Won't be done, or no longer a problem: close it as not planned, saying why.
-- Replaced, because the problem changed: close it as not planned, linking the new issue.
-- Duplicate: comment on the other issue with anything this one adds, then close this one as its duplicate.
+- If it was fixed outside a pull request, close it as completed and name the fix.
+- If it won't be done or is no longer a problem, close it as not planned and say why.
+- If the problem changed, file a new issue, then close this one as not planned and link it.
+- If another issue already covers it, add anything new there and close this one as a duplicate.
 
 ## Pull requests
 
