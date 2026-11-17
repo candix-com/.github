@@ -128,4 +128,4 @@ One change a reviewer can follow in one reading.
 
 - Keep it a draft until it can be merged.
 - Push each update as a new commit. Don't amend, rebase or force-push.
-- When it changes what it does, rewrite the title and description.
+- Keep the title and description true to the final change.
