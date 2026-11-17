@@ -16,7 +16,7 @@ Search open and closed issues first. If the problem is already filed, comment th
 
 #### Body
 
-Only Problem is required.
+Write the body in this shape. Only Problem is required.
 
 ```md
 ### Problem
@@ -43,7 +43,7 @@ Pick the first that applies. Treat a bug users can hit as one they are hitting.
 
 #### Effort
 
-Expected changed lines, tests included:
+The expected number of changed lines, tests included:
 
 - `High`: over 1,000.
 - `Medium`: 100 to 1,000.
@@ -53,13 +53,13 @@ Expected changed lines, tests included:
 
 #### Triage
 
-- No value: not triaged yet.
-- `Waiting`: depends on a human.
-- `Ready`: can be worked.
+- No value: the issue hasn't been triaged yet.
+- `Waiting`: the issue depends on a human to move forward.
+- `Ready`: the issue can be worked on.
 
 #### Assignee
 
-Whoever does the work. Leave it empty for triage, or assign yourself.
+The assignee is whoever does the work. Leave it empty and triage will assign it, or assign yourself if you're taking it.
 
 #### Updates
 
@@ -68,14 +68,14 @@ Edit the body while the issue has no comments. Once someone comments, add new in
 #### Links
 
 - Blocked by: another issue, here or upstream, has to be resolved first.
-- Related: a different problem in the same area or with the same cause.
+- Related: another issue is a different problem in the same area or with the same cause.
 
 ### Closing
 
 - Fixed some other way: close it as completed, naming the fix.
 - Won't be done, or no longer a problem: close it as not planned, saying why.
 - Replaced, because the problem changed: close it as not planned, linking the new issue.
-- Duplicate: close it as a duplicate, after adding anything it has that the other lacks.
+- Duplicate: comment on the other issue with anything this one adds, then close this one as its duplicate.
 
 ## Pull requests
 
@@ -87,7 +87,7 @@ One imperative sentence under 72 characters, with no trailing period, that says 
 
 ### Description
 
-For a reviewer who wasn't there and a developer reading it months later. Leave out any section with nothing to say.
+Write it for a reviewer who wasn't there and a developer reading it months later. Leave out any section with nothing to say.
 
 ```md
 ### Problem
@@ -114,14 +114,14 @@ Where to look first, and how the change was checked.
 </details>
 ```
 
-- Under 2,500 characters, not counting Choices.
+- Keep it under 2,500 characters, not counting Choices.
 - Outside Choices, mention a design decision only if a reviewer needs it to approve.
-- `Closes #<n>` for each issue it resolves.
-- Plain sentences, no em dashes.
+- Put `Closes #<n>` in it for each issue it resolves.
+- Write plain sentences, with no em dashes.
 
 ### Size
 
-One change a reviewer can follow in one reading.
+Make one change a reviewer can follow in one reading.
 
 ### Working
 
