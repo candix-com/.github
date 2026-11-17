@@ -126,6 +126,6 @@ One change a reviewer can follow in one reading.
 
 ### Working
 
-- Open it as a GitHub draft pull request. Mark it ready for review once it can be merged.
+- Keep it a draft pull request until it can be merged.
 - Push each update as a new commit. Don't amend, rebase or force-push.
 - When it changes what it does, rewrite the title and description.

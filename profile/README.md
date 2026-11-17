@@ -18,4 +18,4 @@ The full rules are in [CONTRIBUTING.md](https://github.com/candix-com/.github/bl
 - One imperative title under 72 characters.
 - Description: Problem, What changes, Worth knowing, Reviewing.
 - One change per pull request.
-- Open it as a GitHub draft pull request. Mark it ready for review once it can be merged.
+- Keep it a draft pull request until it can be merged.
