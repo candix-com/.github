@@ -34,7 +34,7 @@ How it came up, and any guess at the cause or solution, marked as a guess.
 
 #### Priority
 
-Pick the first that applies. Treat a bug users can hit as one they are hitting.
+How much the problem hurts users:
 
 - `Urgent`: a security hole, data lost or wrong, or users can't use the product at all.
 - `High`: users can't do something they need to, because of a bug or a missing capability.
