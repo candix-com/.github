@@ -1,7 +1,6 @@
 {
   "enabledPlugins": {
     "engineering@candix": true,
-    "maintainer@candix": true,
     "reviewers@candix": true
   },
   "extraKnownMarketplaces": {
